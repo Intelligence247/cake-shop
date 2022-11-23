@@ -156,3 +156,8 @@ header {
     transform: translateX(-15px);
     transform: translateY(15px);
 }
+
+.section2{
+    height: auto;
+    background-color: #eeeeee;
+}
