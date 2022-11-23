@@ -75,6 +75,7 @@ header {
 }
 
 .welcome p,
+.allCakes p,
 .about p:nth-child(3) {
     border: 2px solid black;
     font-size: 1.5rem;
@@ -87,6 +88,7 @@ header {
 }
 
 .about p:nth-child(3):hover,
+.allCakes p:hover,
 .welcome p:hover {
     background-color: black;
     color: #ef7998;
@@ -115,7 +117,8 @@ header {
 }
 
 .about h1 {
-    color: black;
+    color: #6c757d;
+    font-weight: 200;
 }
 
 .about span,
@@ -138,26 +141,159 @@ header {
 .section1 img {
     width: 35rem;
     height: 25rem;
-
-
-
+    z-index: 1;
+    position: relative;
 }
 
 .move {
     border: 5px solid #f9e494;
     position: absolute;
-    width: 35rem;
-    height: 25rem;
-    transition: all 0.28s ease-in-out;
-    top: 4.85rem;
+    width: 35.7rem;
+    height: 25.7rem;
+    transition: all 0.6s ease-in-out;
+    top: 3rem;
+    right: 8rem;
 }
 
-.move:hover {
-    transform: translateX(-15px);
-    transform: translateY(15px);
+.both:hover .move {
+    translate: 32px 15px 1px;
 }
 
-.section2{
+.section2 {
     height: auto;
     background-color: #eeeeee;
+}
+
+.section2 .about {
+    margin: auto;
+}
+
+.allCakes {
+    display: flex;
+    gap: 4rem;
+    width: max-content;
+    margin: auto;
+    margin-top: 2rem;
+}
+
+.search img {
+    width: 1.5rem;
+    height: 1.5rem;
+    opacity: 100%;
+
+}
+
+.search p {
+    background-color: #ef7998;
+    height: 2.5rem;
+    width: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px 0px 0px 5px;
+
+}
+
+.search input {
+    width: 32rem;
+    height: 2.5rem;
+    border-radius: 0px 5px 5px 0px;
+    border-left: none;
+    padding-left: 1rem;
+}
+
+.search {
+    display: flex;
+    width: max-content;
+    margin: auto;
+    margin-top: 2rem;
+
+}
+
+.search input:focus {
+    outline-color: #74cde2e8;
+    border: none;
+
+}
+
+.pics1 {
+    width: max-content;
+    height: max-content;
+    position: relative;
+    z-index: 0;
+}
+
+.pics1 img {
+    width: 22rem;
+    height: 17rem;
+    display: flex;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.imgcart {
+    position: relative;
+    width: max-content;
+    height: max-content;
+
+}
+
+p.movecart img {
+    /* width: 0.1rem;
+    height: 0.1rem; */
+    display: none;
+}
+
+.imgcart p {
+    position: absolute;
+    background-color: #f9e494;
+    border-top-left-radius: 12px;
+
+    bottom: -3.6rem;
+    right: -2rem;
+    /* z-index: 1; */
+    width: 0rem;
+    height: 0rem;
+    translate: -30px -57px 0;
+    transition: all 0.5s ease-in-out
+}
+
+.pics1:hover .imgcart p {
+    padding: 0.7rem;
+    width: 3rem;
+    height: 4rem;
+    display: block;
+    /* z-index: 1; */
+}
+
+.pics1:hover p.movecart img {
+    display: block;
+    width: 1rem;
+    height: 1rem;
+}
+
+.caption {
+    display: flex;
+    width: auto;
+    height: 4.5rem;
+    background-color: white;
+    border-radius: 0px 0px 4px 4px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem 1rem;
+    font-size: 1.3rem;
+}
+
+.pictures {
+    display: flex;
+    flex-wrap: wrap;
+    width: 70rem;
+    height: auto;
+    gap: 2rem;
+    margin: auto;
+    margin-top: 3rem;
+    padding-bottom: 4rem;
+}
+
+.pics1 img:hover {
+ transform: scale3d(2);
 }
