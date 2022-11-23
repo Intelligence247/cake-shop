@@ -221,13 +221,19 @@ header {
     height: max-content;
     position: relative;
     z-index: 0;
+    overflow: hidden;
+
 }
 
 .pics1 img {
-    width: 22rem;
-    height: 17rem;
+    /* overflow: hidden; */
+    max-width: 22rem;
+    max-height: 17rem;
     display: flex;
     border-radius: 5px 5px 0px 0px;
+    z-index: 0;
+    position: relative;
+    transition: all 0.5s ease-in-out
 }
 
 .imgcart {
@@ -281,6 +287,8 @@ p.movecart img {
     align-items: center;
     padding: 0rem 1rem;
     font-size: 1.3rem;
+    z-index: 1;
+    position: relative;
 }
 
 .pictures {
@@ -295,5 +303,5 @@ p.movecart img {
 }
 
 .pics1 img:hover {
- transform: scale3d(2);
+    transform: scale(1.2);
 }
