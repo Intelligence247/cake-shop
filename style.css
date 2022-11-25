@@ -34,6 +34,7 @@ header {
 
 .left {
     gap: 10rem;
+
 }
 
 .right {
@@ -52,6 +53,7 @@ header {
     border: 1px solid black;
     padding: 0.5rem;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .cart:hover {
@@ -64,6 +66,7 @@ header {
 .has p:hover {
     color: black;
     transition: all 0.2s linear;
+    cursor: pointer;
 }
 
 .welcome {
@@ -138,25 +141,32 @@ header {
     position: relative;
 }
 
-.section1 img {
+.both img {
     width: 35rem;
     height: 25rem;
     z-index: 1;
-    position: relative;
+    position: absolute;
+    margin: auto;
 }
 
 .move {
-    border: 5px solid #f9e494;
+    border: 8px solid #f9e494;
     position: absolute;
-    width: 35.7rem;
-    height: 25.7rem;
+    width: 35.9rem;
+    height: 25.9rem;
     transition: all 0.6s ease-in-out;
-    top: 3rem;
-    right: 8rem;
+    top: -2.65rem;
+    right: 2.4rem;
+}
+
+.both {
+    position: relative;
+    width: 36rem;
+    height: 26rem;
 }
 
 .both:hover .move {
-    translate: 32px 15px 1px;
+    translate: 30px 35px 1px;
 }
 
 .section2 {
@@ -253,7 +263,6 @@ p.movecart img {
     position: absolute;
     background-color: #f9e494;
     border-top-left-radius: 12px;
-
     bottom: -3.6rem;
     right: -2rem;
     /* z-index: 1; */
