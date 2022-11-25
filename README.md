@@ -10,7 +10,7 @@ Clone or download this repository and run with a local server of open `index.htm
 - Html
 - Css
 ## Demo
-[Go Live]()
+[Go Live](https://ephemeral-pithivier-dc232a.netlify.app)
 
 ![screenshot](./media/s1.png)
 ![screenshot](./media/s2.png)
