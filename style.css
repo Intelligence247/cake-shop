@@ -6,11 +6,13 @@
 
 :root {
     font-size: 16px;
+    --yellowTrans: rgba(249, 228, 148, 0.5);
 }
 
 body {
     font-family: "Kaushan Script", cursive;
-    background-image: url(./media/bg2.jpg);
+    /* background-image: url(./media/imgBack.jpeg); */
+    background: linear-gradient(var(--yellowTrans), var(--yellowTrans)), url(./media/imgBack.jpeg) center/cover fixed no-repeat;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
@@ -64,7 +66,6 @@ header {
 .cart:hover {
     background-color: #ef7998;
     transition: all 0.2s ease-in-out;
-    color: white;
     border: 1px solid #ef7998;
 }
 
