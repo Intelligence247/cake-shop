@@ -66,6 +66,7 @@ header {
 .cart:hover {
     background-color: #ef7998;
     transition: all 0.2s ease-in-out;
+    color: white;
     border: 1px solid #ef7998;
 }
 
@@ -320,6 +321,10 @@ p.movecart img {
     transform: scale(1.2);
 }
 
+details {
+    display: none;
+}
+
 @media (max-width:640px) {
     :root {
         font-size: 10px;
@@ -349,8 +354,10 @@ p.movecart img {
 
     header {
         width: 70rem;
-        min-height: 13rem;
-        display: flex;
+        height: max-content;
+        /* display: flex; */
+        padding-top: 2rem;
+
     }
 
     header img {
@@ -526,6 +533,18 @@ p.movecart img {
     .imgcart p {
         bottom: -6.2rem;
         right: -3rem;
+
+    }
+
+    details {
+        display: block;
+        font-size: 4rem;
+
+
+    }
+
+    details>summary {
+        height: max-content;
 
     }
 
