@@ -56,6 +56,11 @@ header {
     gap: 1rem;
 }
 
+.cart:hover img:first-child,
+.cart img:nth-child(2) {
+    display: none;
+}
+
 .cart {
     border: 1px solid black;
     padding: 0.5rem;
@@ -69,6 +74,12 @@ header {
     color: white;
     border: 1px solid #ef7998;
 }
+
+.cart:hover img:nth-child(2) {
+    display: block;
+}
+
+
 
 .has p:hover {
     color: black;
@@ -260,9 +271,9 @@ header {
 }
 
 p.movecart img {
-    /* width: 0.1rem;
-    height: 0.1rem; */
-    display: none;
+    width: 1rem;
+    height: 1rem;
+
 }
 
 .imgcart p {
