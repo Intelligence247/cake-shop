@@ -74,10 +74,137 @@ let infos = [
 ]
 const input = document.querySelector('input')
 const pictures = document.querySelector('.pictures')
-let arr = []
+const cakes = document.querySelector('#cakes')
+const cupcakes = document.querySelector('#cupcakes')
+const sweets = document.querySelector('#sweets')
+const doughnuts = document.querySelector('#doughnuts')
+const all = document.querySelector('#all')
+
+for (const c of infos) {
+    pictures.innerHTML += `<div class="pics1">
+                    <div class="imgcart"> 
+                    <img src=${c.bgimg} alt="">
+                        <p class="movecart">
+                            <img src=${c.cartimg} alt="">
+                        </p>
+                    </div>
+
+                    <div class="caption">
+                        <p id="word">${c.name}</p>
+                        <p>${c.price}</p>
+                    </div>
+                </div>`
+}
+
+
+
+cakes.addEventListener('click', () => {
+    pictures.innerHTML = ''
+    const filter = infos.filter((n) => n.name == 'Cake Item')
+    for (const c of filter) {
+        pictures.innerHTML += `<div class="pics1">
+                    <div class="imgcart"> 
+                    <img src=${c.bgimg} alt="">
+                        <p class="movecart">
+                            <img src=${c.cartimg} alt="">
+                        </p>
+                    </div>
+
+                    <div class="caption">
+                        <p id="word">${c.name}</p>
+                        <p>${c.price}</p>
+                    </div>
+                </div>`
+    }
+})
+
+cupcakes.addEventListener('click', () => {
+    pictures.innerHTML = ''
+    const filter = infos.filter((n) => n.name == 'Cupcake Item')
+    for (const c of filter) {
+        pictures.innerHTML += `<div class="pics1">
+                    <div class="imgcart"> 
+                    <img src=${c.bgimg} alt="">
+                        <p class="movecart">
+                            <img src=${c.cartimg} alt="">
+                        </p>
+                    </div>
+
+                    <div class="caption">
+                        <p id="word">${c.name}</p>
+                        <p>${c.price}</p>
+                    </div>
+                </div>`
+    }
+})
+
+sweets.addEventListener('click', () => {
+    pictures.innerHTML = ''
+    const filter = infos.filter((n) => n.name == 'Sweet Item')
+    for (const c of filter) {
+        pictures.innerHTML += `<div class="pics1">
+                    <div class="imgcart"> 
+                    <img src=${c.bgimg} alt="">
+                        <p class="movecart">
+                            <img src=${c.cartimg} alt="">
+                        </p>
+                    </div>
+
+                    <div class="caption">
+                        <p id="word">${c.name}</p>
+                        <p>${c.price}</p>
+                    </div>
+                </div>`
+    }
+})
+
+
+doughnuts.addEventListener('click', () => {
+    pictures.innerHTML = ''
+    const filter = infos.filter((n) => n.name == 'Doughnut Item')
+    for (const c of filter) {
+        pictures.innerHTML += `<div class="pics1">
+                    <div class="imgcart"> 
+                    <img src=${c.bgimg} alt="">
+                        <p class="movecart">
+                            <img src=${c.cartimg} alt="">
+                        </p>
+                    </div>
+
+                    <div class="caption">
+                        <p id="word">${c.name}</p>
+                        <p>${c.price}</p>
+                    </div>
+                </div>`
+    }
+})
+
+
+
+all.addEventListener('click', () => {
+    pictures.innerHTML = ''
+    for (const c of infos) {
+        pictures.innerHTML += `<div class="pics1">
+                    <div class="imgcart"> 
+                    <img src=${c.bgimg} alt="">
+                        <p class="movecart">
+                            <img src=${c.cartimg} alt="">
+                        </p>
+                    </div>
+
+                    <div class="caption">
+                        <p id="word">${c.name}</p>
+                        <p>${c.price}</p>
+                    </div>
+                </div>`
+    }
+})
+
 input.addEventListener('input', () => {
-    const filter = infos.filter((n) => (n.name.toUpperCase().includes(input.value.toUpperCase())))
-    console.log(filter)
+    pictures.innerHTML = ''
+
+    const filter = infos.filter((n) => n.name.toUpperCase().includes(input.value.toUpperCase()))
+
     for (const c of filter) {
         pictures.innerHTML += `<div class="pics1">
                     <div class="imgcart"> 
