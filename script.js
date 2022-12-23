@@ -80,7 +80,7 @@ const sweets = document.querySelector('#sweets')
 const doughnuts = document.querySelector('#doughnuts')
 const all = document.querySelector('#all')
 
-for (const c of infos) {
+for (const c of cakes) {
     pictures.innerHTML += `<div class="pics1">
                     <div class="imgcart"> 
                     <img src=${c.bgimg} alt="">
@@ -100,7 +100,7 @@ for (const c of infos) {
 
 cakeEl.addEventListener('click', () => {
     pictures.innerHTML = ''
-    const filter = infos.filter((n) => n.name == 'Cake Item')
+    const filter = cakes.filter((n) => n.name == 'Cake Item')
     for (const c of filter) {
         pictures.innerHTML += `<div class="pics1">
                     <div class="imgcart"> 
@@ -120,7 +120,7 @@ cakeEl.addEventListener('click', () => {
 
 cupcakes.addEventListener('click', () => {
     pictures.innerHTML = ''
-    const filter = infos.filter((n) => n.name == 'Cupcake Item')
+    const filter = cakes.filter((n) => n.name == 'Cupcake Item')
     for (const c of filter) {
         pictures.innerHTML += `<div class="pics1">
                     <div class="imgcart"> 
@@ -140,7 +140,7 @@ cupcakes.addEventListener('click', () => {
 
 sweets.addEventListener('click', () => {
     pictures.innerHTML = ''
-    const filter = infos.filter((n) => n.name == 'Sweet Item')
+    const filter = cakes.filter((n) => n.name == 'Sweet Item')
     for (const c of filter) {
         pictures.innerHTML += `<div class="pics1">
                     <div class="imgcart"> 
@@ -161,7 +161,7 @@ sweets.addEventListener('click', () => {
 
 doughnuts.addEventListener('click', () => {
     pictures.innerHTML = ''
-    const filter = infos.filter((n) => n.name == 'Doughnut Item')
+    const filter = cakes.filter((n) => n.name == 'Doughnut Item')
     for (const c of filter) {
         pictures.innerHTML += `<div class="pics1">
                     <div class="imgcart"> 
@@ -183,7 +183,7 @@ doughnuts.addEventListener('click', () => {
 
 all.addEventListener('click', () => {
     pictures.innerHTML = ''
-    for (const c of infos) {
+    for (const c of cakes) {
         pictures.innerHTML += `<div class="pics1">
                     <div class="imgcart"> 
                     <img src=${c.bgimg} alt="">
@@ -203,7 +203,7 @@ all.addEventListener('click', () => {
 input.addEventListener('input', () => {
     pictures.innerHTML = ''
 
-    const filter = infos.filter((n) => n.name.toUpperCase().includes(input.value.toUpperCase()))
+    const filter = cakes.filter((n) => n.name.toUpperCase().includes(input.value.toUpperCase()))
 
     for (const c of filter) {
         pictures.innerHTML += `<div class="pics1">
