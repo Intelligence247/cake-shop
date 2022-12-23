@@ -1,4 +1,4 @@
-let infos = [
+let cakes = [
     {
         bgimg: './media/sweets-1.jpeg',
         cartimg: './media/cart.svg',
@@ -74,7 +74,7 @@ let infos = [
 ]
 const input = document.querySelector('input')
 const pictures = document.querySelector('.pictures')
-const cakes = document.querySelector('#cakes')
+const cakeEl = document.querySelector('#cakes')
 const cupcakes = document.querySelector('#cupcakes')
 const sweets = document.querySelector('#sweets')
 const doughnuts = document.querySelector('#doughnuts')
@@ -98,7 +98,7 @@ for (const c of infos) {
 
 
 
-cakes.addEventListener('click', () => {
+cakeEl.addEventListener('click', () => {
     pictures.innerHTML = ''
     const filter = infos.filter((n) => n.name == 'Cake Item')
     for (const c of filter) {
