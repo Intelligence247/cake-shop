@@ -17,6 +17,8 @@ body {
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
+    width: 100vw;
+    overflow-x: hidden;
 }
 
 header {
@@ -78,8 +80,6 @@ header {
 .cart:hover img:nth-child(2) {
     display: block;
 }
-
-
 
 .has p:hover {
     color: black;
@@ -150,12 +150,19 @@ header {
 
 
 .section1 {
-    height: 90vh;
-    background-color: white;
+    height: 60rem;
     display: flex;
     justify-content: space-around;
     align-items: center;
     position: relative;
+    width: 80rem;
+    margin: auto;
+
+}
+
+.section1w {
+    background-color: white;
+    width: 100%;
 }
 
 .both img {
@@ -377,6 +384,11 @@ details {
 
     body {
         overflow-x: hidden;
+        width: 100vw;
+    }
+
+    .section1w {
+        width: 70rem;
     }
 
     .welcome {
