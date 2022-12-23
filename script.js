@@ -72,11 +72,14 @@ let infos = [
         name: 'Doughnut Item',
     },
 ]
-
+const input = document.querySelector('input')
 const pictures = document.querySelector('.pictures')
-
-for (const c of infos) {
-    pictures.innerHTML += `<div class="pics1">
+let arr = []
+input.addEventListener('input', () => {
+    const filter = infos.filter((n) => (n.name.toUpperCase().includes(input.value.toUpperCase())))
+    console.log(filter)
+    for (const c of filter) {
+        pictures.innerHTML += `<div class="pics1">
                     <div class="imgcart"> 
                     <img src=${c.bgimg} alt="">
                         <p class="movecart">
@@ -89,4 +92,5 @@ for (const c of infos) {
                         <p>${c.price}</p>
                     </div>
                 </div>`
-}
+    }
+})
